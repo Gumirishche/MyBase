@@ -2,15 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -20,17 +20,22 @@
    <children>
       <AnchorPane prefHeight="427.0" prefWidth="268.0" style="-fx-background-color: #333;">
          <children>
-            <Button layoutX="83.0" layoutY="113.0" mnemonicParsing="false" text="Добавить">
+            <Button fx:id="addButton" layoutX="83.0" layoutY="113.0" mnemonicParsing="false" text="Добавить">
                <font>
-                  <Font name="Constantia" size="18.0" />
+                  <Font name="Plantagenet Cherokee" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="58.0" layoutY="61.0" prefHeight="52.0" prefWidth="152.0" style="-fx-background-color: white;" text="Введите текст">
+            <Label layoutX="69.0" layoutY="9.0" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #333;" text="Список дел" textFill="#fff9f9">
                <font>
-                  <Font name="Constantia" size="18.0" />
+                  <Font name="Plantagenet Cherokee" size="24.0" />
                </font>
             </Label>
-            <ListView layoutX="34.0" layoutY="158.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextField fx:id="textField" layoutX="55.0" layoutY="61.0" prefHeight="43.0" prefWidth="158.0" promptText="Введите задание" style="-fx-background-color: #333; -fx-border-color: #000;" />
+            <VBox fx:id="VBox" layoutX="11.0" layoutY="153.0" prefHeight="260.0" prefWidth="247.0">
+               <children>
+                  <AnchorPane prefHeight="261.0" prefWidth="247.0" />
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </children>
