@@ -30,8 +30,8 @@
                   <Font name="Plantagenet Cherokee" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="textField" layoutX="55.0" layoutY="61.0" prefHeight="43.0" prefWidth="158.0" promptText="Введите задание" style="-fx-background-color: #333; -fx-border-color: #000;" />
-            <VBox fx:id="VBox" layoutX="11.0" layoutY="153.0" prefHeight="260.0" prefWidth="247.0">
+            <TextField fx:id="textField" layoutX="55.0" layoutY="61.0" prefHeight="43.0" prefWidth="158.0" promptText="Введите задание" style="-fx-background-color: white; -fx-border-color: #000;" />
+            <VBox fx:id="allThings" layoutX="11.0" layoutY="153.0" prefHeight="260.0" prefWidth="247.0" style="-fx-background-color: white; -fx-border-color: #000;">
                <children>
                   <AnchorPane prefHeight="261.0" prefWidth="247.0" />
                </children>
