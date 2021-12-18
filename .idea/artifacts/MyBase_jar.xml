@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MyBase:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyBase_jar</output-path>
+    <root id="archive" name="MyBase.jar">
+      <element id="module-output" name="MyBase" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/postgresql-42.2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/JavaFX/lib/javafx.graphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
