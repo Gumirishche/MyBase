@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 import sample.Main;
 import sample.db.DB;
 
+import javax.swing.*;
+
 public class RegistrationCon {
 
     @FXML
@@ -48,7 +50,11 @@ public class RegistrationCon {
                     stage.setScene(new Scene(root));
                     stage.show();
                 }
+                else {
+                    JOptionPane.showMessageDialog(null,"Поле пустое");
+                }
             } catch (SQLException | IOException e) {
+                JOptionPane.showMessageDialog(null,"Такой пользователь уже существует");
                 e.printStackTrace();
             }
         });

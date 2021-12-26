@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 import sample.Main;
 import sample.db.DB;
 
+import javax.swing.*;
+
 public class LoginCon {
 
     @FXML
@@ -52,6 +54,12 @@ public class LoginCon {
                         stage.setScene(new Scene(root));
                         stage.show();
                     }
+                    else{
+                        JOptionPane.showMessageDialog(null,"Такого пользователя не существует!");
+                    }
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,"Поле пустое");
                 }
             } catch (SQLException | IOException e) {
                 e.printStackTrace();

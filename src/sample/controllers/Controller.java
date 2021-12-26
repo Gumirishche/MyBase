@@ -13,6 +13,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import sample.db.DB;
 
+import javax.swing.*;
+
 public class Controller {
 
     @FXML
@@ -45,6 +47,9 @@ public class Controller {
                     loadInfo();
                     textField.setText("");
                     loadInfo();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,"Поле пустое");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
