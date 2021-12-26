@@ -42,7 +42,12 @@ public class LoginCon {
                 if (!loginField.getText().trim().equals("")) {
                     if(db.login(login)){
                         Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/sample.fxml"));
-                        Main.stage.close();
+                        if(StartCon.num==0){
+                        StartCon.stage.close();
+                        }
+                        else {
+                            RegistrationCon.stage.close();
+                        }
                         stage.setTitle("Список дел");
                         stage.setScene(new Scene(root));
                         stage.show();

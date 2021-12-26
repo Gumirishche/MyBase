@@ -42,9 +42,9 @@ public class RegistrationCon {
                 login = loginField.getText();
                 if (!loginField.getText().trim().equals("")) {
                     db.reg(login);
-                    Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/sample.fxml"));
-                    Main.stage.close();
-                    stage.setTitle("Список дел");
+                    Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/login.fxml"));
+                    StartCon.stage.close();
+                    stage.setTitle("Логин");
                     stage.setScene(new Scene(root));
                     stage.show();
                 }
