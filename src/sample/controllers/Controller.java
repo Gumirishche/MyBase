@@ -1,4 +1,4 @@
-package sample;
+package sample.controllers;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -41,7 +41,7 @@ public class Controller {
         addButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             try {
                 if (!textField.getText().trim().equals("")) {
-                    db.insertTask(textField.getText());
+                    db.insertTask(textField.getText(),LoginCon.login);
                     loadInfo();
                     textField.setText("");
                     loadInfo();
@@ -52,7 +52,7 @@ public class Controller {
         });
         clearButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             try {
-                db.clearTable();
+                db.clearTable(LoginCon.login);
                 loadInfo();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -64,7 +64,7 @@ public class Controller {
     void loadInfo() {
         try {
             allThings.getChildren().clear();
-            ArrayList<String> tasks = db.getTasks();
+            ArrayList<String> tasks = db.getTasks(LoginCon.login);
             for (String task : tasks) allThings.getChildren().add(new Label(task));
         } catch (SQLException e) {
             e.printStackTrace();

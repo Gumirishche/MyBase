@@ -7,13 +7,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public static Stage stage = new Stage();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Список дел");
-        primaryStage.setScene(new Scene(root, 268, 427));
-        primaryStage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
+        stage.setTitle("Логин");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
 
