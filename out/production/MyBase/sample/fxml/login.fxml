@@ -13,7 +13,7 @@
             <Font name="Palatino Linotype" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="vButton" layoutX="185.0" layoutY="167.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="90.0" text="Войти">
+      <Button fx:id="vButton" layoutX="185.0" layoutY="152.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="90.0" text="Войти">
          <font>
             <Font name="Palatino Linotype" size="18.0" />
          </font>
@@ -23,5 +23,10 @@
             <Font name="Palatino Linotype" size="36.0" />
          </font>
       </Label>
+      <Button fx:id="regButton" layoutX="165.0" layoutY="209.0" mnemonicParsing="false" text="Регистрация">
+         <font>
+            <Font name="Palatino Linotype" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

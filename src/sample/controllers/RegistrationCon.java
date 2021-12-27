@@ -13,18 +13,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import sample.Main;
 import sample.db.DB;
 
 import javax.swing.*;
 
 public class RegistrationCon {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField loginField;

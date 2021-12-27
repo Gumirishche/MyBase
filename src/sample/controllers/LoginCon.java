@@ -20,12 +20,6 @@ import javax.swing.*;
 public class LoginCon {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private TextField loginField;
 
     @FXML
