@@ -1,16 +1,22 @@
 package sample.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import sample.Main;
 import sample.db.DB;
 
 import javax.swing.*;
@@ -35,6 +41,11 @@ public class Controller {
     @FXML
     private Button clearButton;
 
+    @FXML
+    private Button vButton;
+
+    public static Stage stage = new Stage();
+    public static int num = 0;
     DB db = null;
 
     @FXML
@@ -60,6 +71,23 @@ public class Controller {
                 db.clearTable(LoginCon.login);
                 loadInfo();
             } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+        vButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+            try {
+                num=1;
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/login.fxml"));
+                if(LoginCon.numL==0) {
+                    LoginCon.stage.close();
+                }
+                else {
+                    RegistrationCon.stage.close();
+                }
+                stage.setTitle("Логин");
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });

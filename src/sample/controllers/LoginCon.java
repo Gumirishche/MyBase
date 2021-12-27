@@ -31,24 +31,29 @@ public class LoginCon {
     @FXML
     private Button vButton;
 
+    @FXML
+    private Button regButton;
+
     DB db = null;
     public static String login="";
     public static Stage stage = new Stage();
+    public static int numL = 0;
 
     @FXML
     void initialize() {
         db = new DB();
         vButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             try {
+                numL=0;
                 login=loginField.getText();
                 if (!loginField.getText().trim().equals("")) {
                     if(db.login(login)){
                         Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/sample.fxml"));
-                        if(StartCon.num==0){
-                        StartCon.stage.close();
+                        if(Controller.num==0){
+                        Main.stage.close();
                         }
                         else {
-                            RegistrationCon.stage.close();
+                            Controller.stage.close();
                         }
                         stage.setTitle("Список дел");
                         stage.setScene(new Scene(root));
@@ -62,6 +67,24 @@ public class LoginCon {
                     JOptionPane.showMessageDialog(null,"Поле пустое");
                 }
             } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        regButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+            try {
+                numL=1;
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/fxml/registration.fxml"));
+                if(Controller.num==0) {
+                    Main.stage.close();
+                }
+                else {
+                    Controller.stage.close();
+                }
+                stage.setTitle("Регистрация");
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });
